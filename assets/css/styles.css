@@ -1,0 +1,220 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;    
+    background-color: teal;
+    
+}
+.conteiner{
+    min-height: 100vh;
+   
+}
+
+
+
+/* menu principal*/
+.main-menu{
+    background-color: rgba(127, 255, 212, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.main-menu h1 a{
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    color: springgreen;
+    display: block;
+    padding: 20px;
+    position: relative;
+    
+}
+
+.main-menu ul{
+    list-style: none; 
+    display: flex;
+}
+
+.main-menu ul li a{
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    color: aqua;
+    display: block;
+    padding: 20px;
+    position: relative;
+    
+}
+
+.main-menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: yellowgreen;
+    transition: all 300ms ease-in-out;
+}
+
+.main-menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;   
+}
+
+/*pagina inicial*/
+
+.home{
+    text-align: center;
+    background-image: url('../img/tumblr_ptlbuufC7a1uxrf48o1_640.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#text1 {
+    display: block;
+    position: absolute;
+    text-align: center ;
+    font-size: 30px;
+    color: rgb(127, 255, 212);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+
+/*galeria de artes*/
+.Artes-da-Nicole {
+
+    background-image: url('../img/XDr7.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Artes-da-Nicole h2{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 40px;
+    color: rgb(112, 23, 23);
+    padding: 10px 40px 15px 15px;
+}
+
+.imageGallery{
+    display: grid;
+    justify-items: center;
+    
+}
+
+.list-box-art{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    max-width: auto;
+}
+
+.imageGallery img{
+    width: 100%;
+    max-width: 20rem;
+    max-height: 20rem;
+    overflow: hidden;
+    padding: 10px 10px 30px 10px;
+    background: #eee;
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+    margin-right:10px;
+    box-shadow: #fff;
+    -moz-box-shadow: 0px 2px 15px #333 ;
+    -webkit-box-shadow: 0px 2px 15px #333 ;
+    -o-box-shadow: 0px 2px 15px #333 ;
+    transition: all 300ms ease-in-out;
+}
+
+.imageGallery img:hover{
+    transform: translate( -3%, 3%) scale(1.2) rotate(5deg);
+}
+
+/* tudo que ela gosta */
+
+.tudo-que-ela-gosta{
+
+    font-family: 'Montserrat', sans-serif; 
+    background-image: url('../img/giphy.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+
+#list-box{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#list-1{
+    padding: 20px;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    max-width: auto;
+}
+
+#list-2{
+    padding: 20px;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    max-width: auto;
+}
+
+.tudo-que-ela-gosta h2{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 40px;
+    color: yellow;
+    padding: 10px 40px 0px 15px;
+}
+.tudo-que-ela-gosta h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    
+}
+.tudo-que-ela-gosta h3 a {
+    color: mediumseagreen;
+   
+}
+
+.text-2 {
+    padding: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: white;
+    display: block;
+}
+ 
+@media (max-width: 1000px) {
+
+    #list-1{
+        grid-template-columns: 1fr;
+    }
+    
+    #list-2{
+        grid-template-columns: 1fr;
+    }
+
+    .list-box-art{
+        grid-template-columns: 1fr;
+    }
+}
